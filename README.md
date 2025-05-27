@@ -75,6 +75,19 @@ gcloud run deploy dynatrace-node-test \
   --set-env-vars=DT_ONEAGENT_OPTIONS="flavor=default&include=nodejs"
 ````
 
+OR
+
+````
+gcloud run deploy dynatrace-node-test \
+  --image gcr.io/$(gcloud config get-value project)/dynatrace-node-test \
+  --region us-central1 \
+  --platform managed \
+  --allow-unauthenticated \
+  --service-account=cloud-run-dynatrace@$(gcloud config get-value project).iam.gserviceaccount.com \
+  --update-secrets=DT_API_TOKEN=dynatrace-api-token:latest \
+  $(xargs -d '\n' -I {} echo --set-env-vars={} < preset.env)
+````
+
 # 7. Verify in Dynatrace
 
 ![image](https://github.com/user-attachments/assets/a0f4f58f-0d76-46e7-b405-ef2cb332fb36)
