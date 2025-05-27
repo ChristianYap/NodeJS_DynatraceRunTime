@@ -1,6 +1,7 @@
 # NodeJS_DynatraceRunTime
 Adding DT Tokens at runtime instead of buildtime
-https://shell.cloud.google.com/?pli=1&show=ide%2Cterminal![image](https://github.com/user-attachments/assets/0397d227-1a6b-4cf3-a58c-12ab9b3aa37d)
+
+https://shell.cloud.google.com/?pli=1&show=ide%2Cterminal
 
 # 1. Set Up Project Structure
 Create a folder like dynatrace-node-test, and inside it:
