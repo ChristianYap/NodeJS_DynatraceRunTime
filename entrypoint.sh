@@ -61,9 +61,9 @@ ls -lah "${DT_HOME}" || true
 # Set LD_PRELOAD *after* the .so exists
 if [[ -f "${LIB}" ]]; then
   export LD_PRELOAD="${LIB}"
-  echo "✅ LD_PRELOAD set to: ${LD_PRELOAD}"
+  echo "LD_PRELOAD set to: ${LD_PRELOAD}"
 else
-  echo "❌ Dynatrace library not found at ${LIB}"
+  echo "Dynatrace library not found at ${LIB}"
   exit 1
 fi
 
