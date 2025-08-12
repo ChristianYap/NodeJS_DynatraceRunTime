@@ -9,7 +9,6 @@ RUN npm install && \
     mkdir -p /opt/dynatrace/oneagent
 
 ENV DT_HOME="/opt/dynatrace/oneagent"
-ENV LD_PRELOAD="/opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
