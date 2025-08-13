@@ -101,6 +101,21 @@ gcloud run deploy dynatrace-node-test \
 
 - Make sure the container has enough resources to run both the application and the oneagent.
 
+# 9. Alternative Deployments
+
+- Local Docker: You can run this off a local docker instance by pulling down the repository,then:
+
+Run: 
+
+docker build --no-cache -t dt-node-runtime:local. 
+
+docker run --rm -p 8080:8080 `
+  -e DT_API_URL="https://<your-tenant>.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" `
+  -e DT_API_TOKEN="<your-paas-token>" `
+  -e DT_HOME="/opt/dynatrace/oneagent" `
+  dt-node-runtime:local
+
+- Storing Secrets in Github instead:
 
 
 
