@@ -97,7 +97,9 @@ gcloud run deploy dynatrace-node-test \
 ![image](https://github.com/user-attachments/assets/3fad0782-027f-4b61-9cc9-fb6c19b10441)
 ![image](https://github.com/user-attachments/assets/cd250149-ef89-46f7-be99-f84c9f3560f2)
 
-# 8. Verify Token Security
+# 8. Troubleshooting Notes
+
+- Make sure the container has enough resources to run both the application and the oneagent.
 
 
 
